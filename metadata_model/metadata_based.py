@@ -6,7 +6,7 @@ import os
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 
-path = os.getcwd() + "//OneDrive//Desktop//Flotilla Techs//Metadata_based_recommendation//backend//metadata_ML//metadata_model"
+path = os.getcwd() + "//OneDrive//Desktop//Flotilla Techs//Metadata_based_recommendation//metadata_model"
 course_metadata = pd.read_csv(path + '//course_info.csv')
 course_metadata.columns
 course_metadata['metadata'] = course_metadata.apply(lambda x : ''.join(x['CourseName']) + ' ' + ''.join(x['SubjectName']) + ' ' + ''.join(x['SkillName']) + ' ' + ''.join(x['ProviderName']), axis = 1)
