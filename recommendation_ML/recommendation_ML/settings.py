@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'API.endpoints', # my API app
     'rest_framework', # add django rest API framework
+    'API.endpoints', # my API app
+    'API.ml', # my prediction model
 ]
 
 MIDDLEWARE = [

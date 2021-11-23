@@ -1,4 +1,6 @@
-#from django.shortcuts import render
+from django.db import transaction
+from rest_framework.exceptions import APIException
+
 from rest_framework import viewsets
 from rest_framework import mixins
 
@@ -48,8 +50,6 @@ class MLAlgorithmStatusViewSet(
                 instance = serializer.save(active=True)
                 # set active=False for other statuses
                 deactivate_other_statuses(instance)
-
-
 
         except Exception as e:
             raise APIException(str(e))
